@@ -1,0 +1,33 @@
+Ais\KontrakMahasiswaBundle\Entity\KontrakMahasiswa:
+ type: entity
+ table: kontrak_mahasiswa
+ id:
+  id: 
+   type: integer
+   generator: { strategy: AUTO }
+ fields:
+  matakuliah_id:
+   type: integer
+  mahasiswa_id:
+   type: integer
+  semester_id:
+   type: integer
+  kelas_id:
+   type: integer
+  nilai_tugas:
+   type: decimal
+  nilai_uas:
+   type: decimal
+  nilai_uts:
+   type: decimal
+  nilai_huruf:
+   type: string
+   length: 2
+  nilai_angka:
+   type: decimal
+  is_active:
+   type: boolean
+   nullable: true
+  is_delete:
+   type: boolean
+   nullable: true

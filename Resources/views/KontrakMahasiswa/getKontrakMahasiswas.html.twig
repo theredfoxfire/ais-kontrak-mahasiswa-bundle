@@ -1,0 +1,18 @@
+{% block content %}
+    <h1 class="title">{{ 'kontrak_mahasiswa.list'|trans({}, 'AisKontrakMahasiswaBundle') }}</h1>
+
+    <ul id="kontrak_mahasiswa-list">
+        {% for kontrak_mahasiswa in kontrak_mahasiswas %}
+            <li>
+                <a href="{{ path('api_1_get_kontrak_mahasiswa', {'id': kontrak_mahasiswa.id}) }}">{{ kontrak_mahasiswa.nama }}</a>
+                {#[<a href="{{ path('api_1_edit_kontrak_mahasiswas', {'id': kontrak_mahasiswa.id}) }}">{{ 'kontrak_mahasiswa.edit.link'|trans({}, 'AisKontrakMahasiswaBundle') }}</a>]#}
+                {#[<a href="{{ path('api_1_remove_kontrak_mahasiswas', {'id': kontrak_mahasiswa.id}) }}">{{ 'kontrak_mahasiswa.remove.link'|trans({}, 'AisKontrakMahasiswaBundle') }}</a>]#}
+            </li>
+        {% else %}
+            <li>{{ 'kontrak_mahasiswa.list.empty'|trans({}, 'AisKontrakMahasiswaBundle') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_1_new_kontrak_mahasiswa') }}">{{ 'kontrak_mahasiswa.new.link'|trans({}, 'AisKontrakMahasiswaBundle') }}</a>
+    </p>
+{% endblock %}
