@@ -345,4 +345,3 @@ class KontrakMahasiswa implements KontrakMahasiswaInterface
         return $this->is_delete;
     }
 }
-

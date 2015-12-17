@@ -1,6 +1,7 @@
 Ais\KontrakMahasiswaBundle\Entity\KontrakMahasiswa:
  type: entity
  table: kontrak_mahasiswa
+ repositoryClass: Ais\KontrakMahasiswaBundle\Repository\KontrakMahasiswaRepository
  id:
   id: 
    type: integer

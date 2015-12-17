@@ -16,6 +16,16 @@
             <argument>%ais_kontrak_mahasiswa.kontrak_mahasiswa.class%</argument>
             <argument type="service" id="form.factory"></argument>
         </service>
+        
+        <service id="ais_kontrak_mahasiswa.kontrak_mahasiswa.manager" class="Doctrine\ORM\EntityManager" factory-service="doctrine" factory-method="getManagerForClass">
+			<argument>%ais_kontrak_mahasiswa.kontrak_mahasiswa.class%</argument>
+		</service>
+        
+        <service id="ais_kontrak_mahasiswa.kontrak_mahasiswa.repository" 
+			class="Ais\KontrakMahasiswaBundle\Repository\KontrakMahasiswaRepository"
+			factory-service="ais_kontrak_mahasiswa.kontrak_mahasiswa.manager" factory-method="getRepository">
+				<argument>%ais_kontrak_mahasiswa.kontrak_mahasiswa.class%</argument>
+		</service>
     </services>
 
 </container>
